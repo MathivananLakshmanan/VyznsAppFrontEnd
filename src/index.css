@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --brand: #5B4FE9;
+  --bg: #F8F7FF;
+  --surface: #FFFFFF;
+  --surface2: #F3F4F6;
+  --border: #E5E7EB;
+  --text: #111827;
+  --text2: #374151;
+  --text3: #6B7280;
+  --text4: #9CA3AF;
+  --shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+[data-theme="dark"] {
+  --bg: #0F0F13;
+  --surface: #1A1A24;
+  --surface2: #252532;
+  --border: #2E2E3E;
+  --text: #F9FAFB;
+  --text2: #D1D5DB;
+  --text3: #9CA3AF;
+  --text4: #6B7280;
+  --shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+input, textarea, select, button { font-family: inherit; }
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+
+/* Dark mode overrides for all pages */
+[data-theme="dark"] .vyzns-page-bg    { background: var(--bg) !important; }
+[data-theme="dark"] .vyzns-surface    { background: var(--surface) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-theme="dark"] .vyzns-input      { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-theme="dark"] .vyzns-input::placeholder { color: var(--text4) !important; }
+[data-theme="dark"] .vyzns-text       { color: var(--text) !important; }
+[data-theme="dark"] .vyzns-text2      { color: var(--text2) !important; }
+[data-theme="dark"] .vyzns-text3      { color: var(--text3) !important; }
+[data-theme="dark"] .vyzns-border     { border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-card-bg    { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-hero       { background: linear-gradient(135deg, #3730A3 0%, #5B21B6 100%) !important; }
+[data-theme="dark"] .vyzns-cat-bar    { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-cat-btn    { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text3) !important; }
+[data-theme="dark"] .vyzns-modal-bg   { background: var(--surface) !important; }
+[data-theme="dark"] .vyzns-select     { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-theme="dark"] .vyzns-chat-bg    { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-their-bubble { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-theme="dark"] .vyzns-ai-bubble  { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text) !important; }
+[data-theme="dark"] .vyzns-msg-input-wrap { background: var(--surface2) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-sidebar    { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-suggestion-btn { background: var(--surface2) !important; border-color: var(--border) !important; color: var(--text2) !important; }
+[data-theme="dark"] .vyzns-ex-card    { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-ex-card:hover { border-color: #5B4FE9 !important; }
+[data-theme="dark"] .vyzns-left-panel { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-chat-head  { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-input-area { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-form-card  { background: var(--surface) !important; border-color: var(--border) !important; }
+[data-theme="dark"] .vyzns-img-placeholder { background: var(--surface2) !important; }
