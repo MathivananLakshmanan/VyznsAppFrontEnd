@@ -135,7 +135,7 @@ const navCss = (dark: boolean) => `
   .vn {
     position: sticky; top: 0; z-index: 500;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 32px; height: 62px;
+    padding: 0 16px; height: 62px;
     font-family: 'Plus Jakarta Sans', sans-serif;
     transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
   }
@@ -159,6 +159,11 @@ const navCss = (dark: boolean) => `
   .vn-logo  { height:36px; width:auto; object-fit:contain; }
 
   .vn-links { display:flex; gap:2px; }
+  @media (max-width: 640px) {
+    .vn-links { display:none; }
+    .vn-profile-info { display:none; }
+    .vn-chevron { display:none; }
+  }
   .vn-link {
     display:flex; align-items:center; gap:6px;
     padding: 7px 13px; border-radius:10px; border:none; cursor:pointer;

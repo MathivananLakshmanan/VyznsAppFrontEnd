@@ -157,11 +157,11 @@ const css = `
 `;
 
 const s: Record<string, React.CSSProperties> = {
-  page: { display: "flex", minHeight: "100vh", fontFamily: "'Inter', sans-serif" },
+  page: { display: "flex", minHeight: "100vh", fontFamily: "'Inter', sans-serif", flexWrap: "wrap" },
 
   right: {
-    width: "520px", display: "flex", alignItems: "center", justifyContent: "center",
-    padding: "40px 32px", background: "#F8F7FF",
+    width: "100%", maxWidth: "520px", display: "flex", alignItems: "center", justifyContent: "center",
+    padding: "40px 20px", background: "#F8F7FF",
   },
   card: {
     width: "100%", maxWidth: "420px", background: "#fff",
@@ -223,9 +223,9 @@ const s: Record<string, React.CSSProperties> = {
   termsLink: { color: "#5B4FE9", cursor: "pointer" },
 
   left: {
-    flex: 1, background: "linear-gradient(145deg, #5B4FE9 0%, #7C3AED 60%, #4338CA 100%)",
+    flex: 1, minWidth: "300px", background: "linear-gradient(145deg, #5B4FE9 0%, #7C3AED 60%, #4338CA 100%)",
     display: "flex", alignItems: "center", justifyContent: "center",
-    padding: "60px 48px", position: "relative", overflow: "hidden",
+    padding: "40px 24px", position: "relative", overflow: "hidden",
   },
   leftInner: { maxWidth: "420px", animation: "slideIn 0.6s ease both", position: "relative", zIndex: 1 },
   headline: { fontSize: "40px", fontWeight: 800, color: "#fff", lineHeight: 1.2, marginBottom: "16px" },

@@ -72,9 +72,9 @@ export default function Dashboard() {
       )}
 
       {/* Hero */}
-      <div style={{ background: dark ? "linear-gradient(135deg,#3730A3,#5B21B6)" : "linear-gradient(135deg,#5B4FE9,#7C3AED)", padding: "48px 32px 36px", color: "#fff" }}>
-        <div style={{ maxWidth: 640, marginBottom: 32 }}>
-          <h1 style={{ fontSize: 32, fontWeight: 800, marginBottom: 8, lineHeight: 1.2 }}>Find your next great exchange</h1>
+      <div style={{ background: dark ? "linear-gradient(135deg,#3730A3,#5B21B6)" : "linear-gradient(135deg,#5B4FE9,#7C3AED)", padding: "32px 16px 24px", color: "#fff" }}>
+        <div style={{ maxWidth: 640, marginBottom: 24 }}>
+          <h1 style={{ fontSize: "clamp(22px,5vw,32px)", fontWeight: 800, marginBottom: 8, lineHeight: 1.2 }}>Find your next great exchange</h1>
           <p style={{ fontSize: 16, color: "rgba(255,255,255,0.8)", marginBottom: 24 }}>Browse {items.length} items listed by real people</p>
           <form onSubmit={handleSearch} style={{ maxWidth: 520 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8, background: dark ? "#1A1A24" : "#fff", borderRadius: 12, padding: "6px 6px 6px 16px", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}>
@@ -84,7 +84,7 @@ export default function Dashboard() {
             </div>
           </form>
         </div>
-        <div style={{ display: "flex", gap: 32 }}>
+        <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
           {[{ n: items.length, l: "Total Items" }, { n: myItems.length, l: "My Listings" }, { n: items.filter(i => i.status === "AVAILABLE").length, l: "Available" }].map(({ n, l }) => (
             <div key={l} style={{ display: "flex", flexDirection: "column", gap: 2 }}>
               <span style={{ fontSize: 28, fontWeight: 800, color: "#fff" }}>{n}</span>
@@ -95,7 +95,7 @@ export default function Dashboard() {
       </div>
 
       {/* Category bar */}
-      <div style={{ display: "flex", gap: 8, padding: "14px 32px", background: T.surface, borderBottom: `1px solid ${T.border}`, overflowX: "auto" }}>
+      <div style={{ display: "flex", gap: 8, padding: "12px 16px", background: T.surface, borderBottom: `1px solid ${T.border}`, overflowX: "auto" }}>
         {cats.map(c => (
           <button key={c} onClick={() => setActiveCat(c)} style={{ padding: "6px 16px", borderRadius: 999, border: `1.5px solid ${activeCat === c ? "#5B4FE9" : T.border}`, background: activeCat === c ? (dark ? "#2A2560" : "#EEF0FF") : T.surface, color: activeCat === c ? "#5B4FE9" : T.text3, fontSize: 13, fontWeight: activeCat === c ? 600 : 500, cursor: "pointer", whiteSpace: "nowrap", transition: "all 0.15s" }}>
             {c}
@@ -104,7 +104,7 @@ export default function Dashboard() {
       </div>
 
       {/* Grid */}
-      <div style={{ padding: "24px 32px 48px" }}>
+      <div style={{ padding: "20px 16px 48px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
           <h2 style={{ fontSize: 18, fontWeight: 700, color: T.text }}>{activeCat === "All" ? "All Listings" : activeCat}</h2>
           <span style={{ fontSize: 12, color: T.text3, background: T.surface2, padding: "3px 10px", borderRadius: 999 }}>{filtered.length} items</span>

@@ -135,12 +135,12 @@ const css = `
 `;
 
 const s: Record<string, React.CSSProperties> = {
-  page: { display: "flex", minHeight: "100vh", fontFamily: "'Inter', sans-serif" },
+  page: { display: "flex", minHeight: "100vh", fontFamily: "'Inter', sans-serif", flexWrap: "wrap" },
 
   left: {
-    flex: 1, background: "linear-gradient(145deg, #5B4FE9 0%, #7C3AED 50%, #4338CA 100%)",
+    flex: 1, minWidth: "300px", background: "linear-gradient(145deg, #5B4FE9 0%, #7C3AED 50%, #4338CA 100%)",
     display: "flex", alignItems: "center", justifyContent: "center",
-    padding: "60px 48px", position: "relative", overflow: "hidden",
+    padding: "40px 24px", position: "relative", overflow: "hidden",
   },
   leftInner: { maxWidth: "440px", animation: "slideIn 0.6s ease both", position: "relative", zIndex: 1 },
   brand: { display: "flex", alignItems: "center", gap: "10px", marginBottom: "48px" },
@@ -174,8 +174,8 @@ const s: Record<string, React.CSSProperties> = {
   testimonialAuthor: { fontSize: "12px", color: "rgba(255,255,255,0.6)", fontWeight: 500 },
 
   right: {
-    width: "480px", display: "flex", alignItems: "center", justifyContent: "center",
-    padding: "40px 32px", background: "#F8F7FF",
+    width: "100%", maxWidth: "480px", display: "flex", alignItems: "center", justifyContent: "center",
+    padding: "40px 20px", background: "#F8F7FF",
   },
   card: {
     width: "100%", maxWidth: "400px",
